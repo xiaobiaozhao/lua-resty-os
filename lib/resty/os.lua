@@ -36,6 +36,9 @@ local function fork(new_proc, ...)
 end
 
 local function signal(signum, handler)
+    1. -- check param
+    2. -- signal
+    ffi.C.signal(signum, handler)
 end
 
 _M.fork = fork
